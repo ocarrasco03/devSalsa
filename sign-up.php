@@ -30,13 +30,13 @@
       </div>
       <form action="#" method="post">
         <div class="form-group">
-          <input type="text" name="username" id="username" placeholder="username" />
+          <input type="text" name="username" id="username" placeholder="username" required />
         </div>
         <div class="form-group">
-          <input type="email" name="email" id="email" placeholder="email" />
+          <input type="email" name="email" id="email" placeholder="email" required />
         </div>
         <div class="form-group">
-          <input type="password" name="password" id="password" placeholder="password" />
+          <input type="password" name="password" id="password" placeholder="password" required />
         </div>
         <div class="action-links">
           <a href="lost-password.php">forgot your password?</a>

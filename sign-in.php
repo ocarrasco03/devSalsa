@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  $msj = !empty($_SESSION['error']) ? '<span>' .$_SESSION['error'].'</span>' : '' ;
+  if ($_SESSION['valid']) {
+    header('Location: users.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +34,9 @@
     <div class="card mx-auto p-3">
       <div class="text-center">
         <h4>Please Sign In</h4>
+        <?= $msj; ?>
       </div>
-      <form action="#" method="post">
+      <form action="app/app.php" method="POST">
         <div class="form-group">
           <input class="form-control" type="text" name="username" id="username" placeholder="username" />
         </div>
@@ -37,7 +45,7 @@
         </div>
         <div class="action-links flex justify-between">
           <a href="lost-password.php">forgot your password?</a>
-          <button type="submit" class="btn btn-primary">Sign In</button>
+          <button type="submit" class="btn btn-primary ml-1">Sign In</button>
         </div>
       </form>
     </div>
